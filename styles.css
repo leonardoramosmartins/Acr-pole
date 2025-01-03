@@ -1,0 +1,157 @@
+@import url(cel.css);
+@import url(form.css);
+@import url(insta.css);
+@import url(whatsapp.css);
+@import url(loja.css);
+
+:root {
+    --font-step--2: clamp(0.78rem, calc(0.78rem + 0.13vw), 0.84rem);
+    --font-step--1: clamp(0.94rem, calc(0.79rem + 0.38vw), 1.13rem);
+    --font-step-0: clamp(1.13rem, calc(0.83rem + 0.50vw), 1.5rem);
+    --font-step-1: clamp(1.13rem, calc(0.83rem + 1.3vw), 2rem);
+    --font-step-2: clamp(1.62rem, calc(0.78rem + 2.09vw), 2.67rem);
+    --font-step-3: clamp(1.94rem, calc(0.66rem + 3.22vw), 3.55rem);
+    --font-step-4: clamp(2.33rem, calc(0.41rem + 4.81vw), 4.74rem);
+    --font-step-5: clamp(2.8rem, calc(-0.01rem + 7.03vw), 6.31rem);
+    --font-step-6: clamp(1.7rem, calc(-0.66rem + 6.22vw), 6.55rem);
+}
+
+
+
+.logo-inicial {
+    position: fixed; /* Fixa o menu no topo */
+    top: 0; /* Alinha ao topo da página */
+    width: 100%;
+    height: 65px; /* Definindo a altura para um melhor ajuste */
+    display: flex; /* Usando flexbox para alinhar logo e menu lado a lado */
+    align-items: center; /* Alinha itens no centro verticalmente */
+    justify-content: space-between; /* Distribui logo e menu nas extremidades */
+    background-color: rgb(1, 0, 39);
+    position: fixed; /* Torna o elemento fixo */
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha a logo ao centro verticalmente */
+    height: 100%;
+    
+}
+
+.logo img {
+    height: 110px; /* Ajuste o tamanho da logo */
+    width: auto;
+    margin-right: 20px; /* Espaçamento à direita da logo */
+}
+
+.menu {
+    width: 100%;
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu ul {
+    list-style: none; /* Remove os pontos de lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.menu ul li {
+    font-size: var(--font-step--1);
+
+
+}
+
+.menu li {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu li::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s all;
+}
+
+.menu li:hover::after {
+    width: 100%;
+}
+
+.historia {
+    font-size: var(--font-step-0);
+    font-weight: 500;
+    padding-left: 40px; /* Espaço à esquerda */
+    padding-right: 40px; /* Espaço à direita */
+    margin-top: 45px; /* Ajuste para compensar a altura do cabeçalho */
+    padding: 30px;
+    text-align: justify;
+}
+.loc {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */ 
+    height: 10vh; /* Ocupa toda a altura da tela */
+}
+
+.loc p {
+    font-size: 24px;
+    text-align: center; /* Opcional: centraliza o texto dentro do elemento */
+}
+
+.map-container {
+    width: 90%;
+    height: 270px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Ativa o Flexbox dentro do próprio container, se necessário */
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centraliza horizontalmente */
+    position: absolute; /* Permite centralizar com top/left */
+    left: 50%; /* Move o elemento para o meio da tela horizontalmente */
+    transform: translate(-50%); /* Ajusta o centro para a posição correta */
+    margin-bottom: 5%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.criado {
+    margin-top: 21%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    color: rgb(0, 0, 58); /* Cor verde do WhatsApp */;
+    background-color: blue;
+    gap: 10px;
+}
+
+.criado img {
+    width: 19px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+
+@media(max-width:1000px) {
+    .menu ul {
+        display: none;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
